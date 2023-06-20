@@ -1,1 +1,29 @@
-node_modules
+/regulate-client/node_modules
+
+# Ignore bundler config.
+/regulate-api/.bundle
+
+# Ignore the default SQLite database.
+/regulate-api/db/*.sqlite3
+/regulate-api/db/*.sqlite3-*
+
+# Ignore all logfiles and tempfiles.
+/regulate-api/log/*
+/regulate-api/tmp/*
+!/regulate-api/log/.keep
+!/regulate-api/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/regulate-api/tmp/pids/*
+!/regulate-api/tmp/pids/
+!/regulate-api/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+/regulate-api/storage/*
+!/regulate-api/storage/.keep
+/regulate-api/tmp/storage/*
+!/regulate-api/tmp/storage/
+!/regulate-api/tmp/storage/.keep
+
+# Ignore master key for decrypting credentials and more.
+/regulate-api/config/master.key
