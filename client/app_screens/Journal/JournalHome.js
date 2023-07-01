@@ -1,12 +1,24 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Image, TextInput } from "react-native";
+import GreyBackground from '../../styles/GreyBackground';
 
 export default function JournalHome() {
   return (
-    <View>
+    <GreyBackground>
+      <View style={styles.container}>
+        <Text>Journal Home - What to add What to add</Text>
+      
+      </View>
 
-    <Text>JournalHome</Text>
-    </View>
+    </GreyBackground>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // flexDirection: 'column'
+  },
+});

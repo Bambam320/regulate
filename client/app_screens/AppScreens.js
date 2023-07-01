@@ -2,7 +2,6 @@
 import React from 'react';
 import { View } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import GreyBackground from '../styles/GreyBackground';
 
 //component imports
 import WelcomeUser from './WelcomeUser'
