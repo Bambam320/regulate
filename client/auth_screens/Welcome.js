@@ -5,29 +5,28 @@ import { View, TouchableOpacity, Text, StyleSheet, Image, TextInput } from "reac
 
 export default function Welcome() {
   return (
-    <Text>Welcome to login</Text>
-//     <View style={styles.container}>
+    <View style={styles.container}>
 
-//       <Text>REGULATE</Text>
-//       <Text>Please sign in below.</Text>
-//       <TextInput
-//         style={styles.input}
-//         placeholder="Email"
-//         onChangeText={text => setEmail(text)}
-//         value={email}
-//         autoCapitalize="none"
-//       />
-//       <TextInput
-//         style={styles.input}
-//         placeholder="Password"
-//         onChangeText={text => setPassword(text)}
-//         value={password}
-//         secureTextEntry
-//       />
-//       <Button title="Sign In" onPress={handleSignIn} />
-//       <StatusBar style="auto" />
+      <Text>REGULATE</Text>
+      <Text>Please sign in below.</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+        onChangeText={text => setEmail(text)}
+        value={email}
+        autoCapitalize="none"
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
+        onChangeText={text => setPassword(text)}
+        value={password}
+        secureTextEntry
+      />
+      <Button title="Sign In" onPress={handleSignIn} />
+      <StatusBar style="auto" />
 
-//     </View>
+    </View>
   );
 };
 
