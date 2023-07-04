@@ -23,7 +23,7 @@ const RegulateTheme = {
 
 function Home() {
   //set to true for appscreens and false for authscreens
-  const [screenToggle, setScreenToggle] = useState(true);
+  const [screenToggle, setScreenToggle] = useState(false);
   console.log('theme from home component', DefaultTheme)
   // will probably need NativeBase to provide a theme throughout the app
   return (
