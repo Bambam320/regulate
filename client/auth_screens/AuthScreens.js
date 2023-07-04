@@ -12,10 +12,15 @@ export default function AuthScreens() {
   const Stack = createNativeStackNavigator();
   
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }} >
-      {/* <Stack.Screen name="welcome" component={Welcome} />
-      <Stack.Screen name="login" component={Login} />
-      <Stack.Screen name="signUp" component={SignUp} /> */}
+    <Stack.Navigator screenOptions={{ 
+      headerShown: false, 
+      cardStyle: {
+        backgroundColor: "transparent",
+      },
+    }}>
+      <Stack.Screen name="Welcome" component={Welcome} />
+      {/* <Stack.Screen name="Login" component={Login} /> */}
+      {/* <Stack.Screen name="SignUp" component={SignUp} /> */}
     </Stack.Navigator>
   );
 };
