@@ -40,16 +40,16 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
-    // backgroundColor: "#ffffff",
+    backgroundColor: "#ffffff",
   },
-  // container1: {
-  //   width: "100%",
-  //   paddingTop: "5%",
-  //   paddingHorizontal: "10%",
-  // },
-  // image: {
-  //   width: "90%",
-  //   height: "40%",
-  // },
+  container1: {
+    width: "100%",
+    paddingTop: "5%",
+    paddingHorizontal: "10%",
+  },
+  image: {
+    width: "90%",
+    height: "40%",
+  },
 });
 
