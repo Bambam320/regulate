@@ -24,7 +24,7 @@ const JournalButton = ({ onPress, title }) => (
       <Text style={styles.buttonText}>{title}</Text>
     </LinearGradient>
   </TouchableOpacity>
-)
+);
 
 export default function WelcomeUser({ navigation }) {
   return (

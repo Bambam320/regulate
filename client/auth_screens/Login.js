@@ -3,7 +3,9 @@ import { View, TouchableOpacity, Text, StyleSheet, Image, TextInput } from "reac
 
 export default function Login() {
   return (
-    <Text> Login </Text>
+    <View>
+      <Text> Login </Text>
+    </View>
   )
 }
 

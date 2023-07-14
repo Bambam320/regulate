@@ -3,7 +3,9 @@ import { View, TouchableOpacity, Text, StyleSheet, Image, TextInput } from "reac
 
 export default function Signup() {
   return (
-    <Text>SignUp</Text>
+    <View>
+      hsla(55, 100%, 38%, 1)
+    </View>
   )
 }
 

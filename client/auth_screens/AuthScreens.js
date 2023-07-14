@@ -19,8 +19,8 @@ export default function AuthScreens() {
       },
     }}>
       <Stack.Screen name="Welcome" component={Welcome} />
-      {/* <Stack.Screen name="Login" component={Login} /> */}
-      {/* <Stack.Screen name="SignUp" component={SignUp} /> */}
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Signup" component={Signup} />
     </Stack.Navigator>
   );
 };
