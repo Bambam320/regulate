@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Image, TextInput } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import GreyBackground from '../styles/GreyBackground';
@@ -15,18 +15,47 @@ const LoginButton = ({ onPress, title }) => (
 );
 
 export default function Login({ navigation }) {
-  return (
-    <View style={styles.container}>
+  const [loginInfo, setLoginInfo] = useState({
+    username: '',
+    password: '',
+  });
 
-<View style={styles.textContainer}>
+  const updateLogin = (e) => {
+
+  }
+
+  return (
+    <GreyBackground>
+
+      <View style={styles.container}>
+
+        <View style={styles.textContainer}>
           <Text style={styles.text}>Enter your login information below</Text>
+        </View>
+        <View style={styles.inputContainer}>
+
+          <TextInput
+            style={styles.input}
+            onChangeText={updateLogin}
+            value={loginInfo.username}
+            placeholder="enter password"
+            keyboardType="text"
+          />
+          <TextInput
+            style={styles.input}
+            onChangeText={updateLogin}
+            value={loginInfo.password}
+            placeholder="enter password"
+            keyboardType="text"
+          />
         </View>
         <View style={styles.buttonContainer}>
           <LoginButton title="Login" onPress={() => navigation.navigate('Signup')} />
         </View>
 
-      <Text> Login </Text>
-    </View>
+        <Text> Login </Text>
+      </View>
+    </GreyBackground>
   )
 }
 
@@ -38,14 +67,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textContainer: {
-    flex: 2,
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     justifyContent: 'space-around',
     alignItems: 'center'
   },
   text: {
-    fontSize: 69, //hehe
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
     letterSpacing: 6,
@@ -54,6 +83,13 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 10,
+  },
+  inputContainer: {
+    flex: 3,
+
+  },
+  input: {
+
   },
   buttons: {
     elevation: 8,
