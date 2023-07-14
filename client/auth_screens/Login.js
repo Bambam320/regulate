@@ -20,10 +20,11 @@ export default function Login({ navigation }) {
     password: '',
   });
 
-  const updateLogin = (e) => {
-
+  const updateLogin = (v, k) => {
+    setLoginInfo({...loginInfo, [k]:v})
   }
-
+  
+  console.log("login info", loginInfo)
   return (
     <GreyBackground>
 
@@ -33,27 +34,25 @@ export default function Login({ navigation }) {
           <Text style={styles.text}>Enter your login information below</Text>
         </View>
         <View style={styles.inputContainer}>
-
           <TextInput
             style={styles.input}
-            onChangeText={updateLogin}
+            onChange={(e) => updateLogin(e.target.value, 'username')}
             value={loginInfo.username}
-            placeholder="enter password"
-            keyboardType="text"
+            type='username'
+            placeholder="Username"
+            textContentType='username'
           />
           <TextInput
             style={styles.input}
-            onChangeText={updateLogin}
+            onChange={(e) => updateLogin(e.target.value, 'password')}
             value={loginInfo.password}
-            placeholder="enter password"
-            keyboardType="text"
+            placeholder="Password"
+            textContentType='password'
           />
         </View>
         <View style={styles.buttonContainer}>
           <LoginButton title="Login" onPress={() => navigation.navigate('Signup')} />
         </View>
-
-        <Text> Login </Text>
       </View>
     </GreyBackground>
   )
@@ -67,10 +66,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textContainer: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'center',
-    justifyContent: 'space-around',
+    // justifyContent: 'space-around',
     alignItems: 'center'
   },
   text: {
@@ -85,11 +84,15 @@ const styles = StyleSheet.create({
     textShadowRadius: 10,
   },
   inputContainer: {
-    flex: 3,
-
+    flex: 2,
+    flexDirection: 'column'
   },
   input: {
-
+    borderColor: "gray",
+    width: "100%",
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 10,
   },
   buttons: {
     elevation: 8,
@@ -107,7 +110,7 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 28,
     color: "#hsla(360, 100%, 100%, 0.75)",
     fontWeight: "bold",
     alignSelf: "center",

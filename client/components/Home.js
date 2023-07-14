@@ -10,6 +10,8 @@ import AuthScreens from '../auth_screens/AuthScreens';
 import GreyBackground from '../styles/GreyBackground';
 import WelcomeUser from '../app_screens/WelcomeUser';
 
+import Login from '../auth_screens/Login';
+
 //screen toggle is just for viewing auth or app screens
 //need to implement redux store and loading or home screen while user is being loaded
 
@@ -28,7 +30,11 @@ function Home() {
   // will probably need NativeBase to provide a theme throughout the app
   return (
     <NavigationContainer theme={RegulateTheme}>
-      {screenToggle ? <AppScreens /> : <AuthScreens />}
+      {screenToggle ? <AppScreens /> : 
+      <Login />
+
+      }
+      {/* <AuthScreens /> */}
     </NavigationContainer>
   );
 };
