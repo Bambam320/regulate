@@ -67,6 +67,13 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: 'hsla(0, 0%, 18%, 1)'
   },
+  buttonContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: '80%',
+  },
   buttonText: {
     fontSize: 18,
     color: "#hsla(360, 100%, 100%, 0.75)",
