@@ -31,9 +31,10 @@ export default function Login({ navigation }) {
       <View style={styles.container}>
 
         <View style={styles.textContainer}>
-          <Text style={styles.text}>Enter your login information below</Text>
+          <Text style={styles.titleText}>Enter your login information below</Text>
         </View>
         <View style={styles.inputContainer}>
+        <Text style={styles.welcomeText}>{`${loginInfo.username ? 'Welcome: ' + loginInfo.username : '' }`}</Text>
           <TextInput
             style={styles.input}
             onChange={(e) => updateLogin(e.target.value, 'username')}
@@ -48,6 +49,7 @@ export default function Login({ navigation }) {
             value={loginInfo.password}
             placeholder="Password"
             textContentType='password'
+            secureTextEntry= 'true'
           />
         </View>
         <View style={styles.buttonContainer}>
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'space-around',
     alignItems: 'center'
   },
-  text: {
+  titleText: {
     fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -83,14 +85,28 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 10,
   },
+  welcomeText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    letterSpacing: 4,
+    color: 'hsla(45, 90%, 46%, 1)',
+    fontFamily: 'RacingSansOne_400Regular',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: { width: -1, height: 1 },
+    // textShadowRadius: 10,
+  },
   inputContainer: {
     flex: 2,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
   },
   input: {
-    borderColor: "gray",
-    width: "100%",
-    borderWidth: 1,
+    borderColor: "hsla(129, 100%, 100%, 1)",
+    backgroundColor: "hsla(282, 0%, 75%, 1)",
+    width: "10rem",
+    height: "2rem",
+    borderWidth: 2,
     borderRadius: 10,
     padding: 10,
   },
@@ -103,7 +119,7 @@ const styles = StyleSheet.create({
     borderColor: 'hsla(0, 0%, 18%, 1)'
   },
   buttonContainer: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
